@@ -26,7 +26,7 @@ with st.expander("Descipción del proyecto: "):
  
 ##cupo del grupo
 x="numero"
-st.number_input("Numero de alumnos que se necsita: ", min_value=0, format="%i", step= 1, key=x)
+st.number_input("Numero de alumnos que se necsita: ", min_value=0, format="%i", step= 1)
 ## 
 
 
