@@ -50,3 +50,23 @@ end_date = st.date_input('Fecha de término', tomorrow)
 modalidad= ["Presencial", "Remoto", "Hibrido"]
 st.selectbox("Seleccione la modalidad",modalidad,key="Modalidad")
 
+##Ubicación
+st.header("Dirección")
+# Calle y Número
+calle_numero = st.text_input("Calle y Número")
+
+# Colonia
+colonia = st.text_input("Colonia")
+
+# Ciudad, Estado y Código Postal
+col1, col2, col3 = st.columns([2,1,2])
+with col1:
+    ciudad = st.text_input("Ciudad")
+with col2:
+    estado = st.selectbox("Estado", ["", "Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila", "Colima", "Ciudad de México", "Durango", "Estado de México", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas"])
+with col3:
+    codigo_postal = st.text_input("Código Postal")
+
+
+
+
