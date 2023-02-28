@@ -112,8 +112,8 @@ with st.expander("Nombre del responsable: "):
   name_resp= st.text_area("",)
  
 ## Medio de contacto
-with st.expander("Medio de contacto):
-  num_tel= st.text_area("",placeholder="Ingrese su numero de teléfono")
+with st.expander("Medio de contacto"):
+  num_tel= st.text_area("",placeholder="Ingrese su número de teléfono")
   correo= st.text_area("",placeholder="Ingrese su correo electrónico")
  
 
