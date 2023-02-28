@@ -5,8 +5,6 @@ import streamlit as st
 #import plotly.graph_objects as go
 
 
-#incomes= ["Salary", "Blog", "Other Incomes"]
-#expenses=["Rent", "Utilities", "Groceries", "Car", "Other Expenses", "Saving"]
 currency="Proyectos"
 page_title = "Socio formadores"
 page_icon=":office_worker:"
@@ -20,6 +18,9 @@ st.title(page_title+""+page_icon)
 hora=["0","1","2","3","4","5"]
 
 st.header(f"Registro de {currency}")
+with st.expander("Nombre del proyecto: "):
+  name= st.text_area("",)
+ 
 ##Descripccion del proyecto##
 with st.expander("Descipción del proyecto: "):
   description= st.text_area("", placeholder="Ingresa aqui la descripcion del proyecto...")
