@@ -100,18 +100,15 @@ if len(entre) > 0:
   st.write("Entregables:")
   for i, entre in enumerate(entre):
     st.write(f"{i+1}. {entre}")
-##Costo
-st.number_input("Costo de participación: ", min_value=0, format="%i", step= 1)
 
-## Motivo del costo
-#with st.expander("Motivo del costo: "):
- # costo_mot= st.text_area("")
+## Costo
+with st.expander("Motivo del costo: "):
+  st.number_input("Costo de participación: ", min_value=0, format="%i", step= 1)
+  costo_mot= st.text_area("")
 
-## Nombre del responsable
-#with st.expander("Nombre del responsable: "):
- # name_resp= st.text_area("")
  
 ## Medio de contacto
-with st.expander("Medio de contacto"):
+with st.expander("Responsable"):
+  responsable= st.text_area("",placeholder="Ingrese el nombre del responsable")
   num_tel= st.text_area("",placeholder="Ingrese su número de teléfono")
   correo= st.text_area("",placeholder="Ingrese su correo electrónico")
