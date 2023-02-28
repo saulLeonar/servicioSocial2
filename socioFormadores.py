@@ -38,6 +38,6 @@ carreras=st.multiselect("Seleccione carreras participantes: ", ["Todas","Arquite
 #Fecha de inicio
 today = datetime.date.today()
 tomorrow = today + datetime.timedelta(days=1)
-start_date = st.date_input('Start date', today)
-end_date = st.date_input('End date', tomorrow)
+start_date = st.date_input('Fecha de inicio', today)
+end_date = st.date_input('Fecha de término', tomorrow)
 
