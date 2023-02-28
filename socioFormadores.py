@@ -6,7 +6,7 @@ import streamlit as st
 #expenses=["Rent", "Utilities", "Groceries", "Car", "Other Expenses", "Saving"]
 #currency="USD"
 page_title = "Socios formadores"
-page_icon=":man_office_worker:"
+page_icon=":office_worker:"
 layout= "centered"
 
 st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
