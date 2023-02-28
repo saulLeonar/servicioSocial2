@@ -81,5 +81,13 @@ with col3:
     codigo_postal = st.text_input("Código Postal")
 
 
-
+##Actividades
+st.title("Actividades")
+act = st.text_area("Ingrese las actividades, uno por línea")
+act = act.split("\n")
+act = list(filter(None, act))
+if len(requirements) > 0:
+  st.write("Actividades:")
+  for i, act in enumerate(act):
+    st.write(f"{i+1}. {act}")
 
