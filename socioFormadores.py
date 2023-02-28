@@ -94,12 +94,12 @@ if len(requirements) > 0:
 ##Entregables
 st.title("Entregables")
 entre = st.text_area("Ingrese los entregables, uno por línea")
-entre = act.split("\n")
+entre = entre.split("\n")
 entre = list(filter(None, entre))
 if len(entre) > 0:
   st.write("Entregables:")
-  for i, act in enumerate(entre):
-    st.write(f"{i+1}. {act}")
+  for i, entre in enumerate(entre):
+    st.write(f"{i+1}. {entre}")
 ##Costo
 st.number_input("Costo de participación: ", min_value=0, format="%i", step= 1)
 
