@@ -44,7 +44,7 @@ container2 = st.beta_container()
 add_button = container2.button('add')
 
 if add_button:
-    st.wt.append(sym)
+    wt.append(sym)
 
 
 #Fechas
