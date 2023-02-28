@@ -83,11 +83,37 @@ with col3:
 
 ##Actividades
 st.title("Actividades")
-act = st.text_area("Ingrese las actividades, uno por línea")
+act = st.text_area("Ingrese las actividades, una por línea")
 act = act.split("\n")
 act = list(filter(None, act))
 if len(requirements) > 0:
   st.write("Actividades:")
   for i, act in enumerate(act):
     st.write(f"{i+1}. {act}")
+
+##Entregables
+st.title("Entregables")
+entre = st.text_area("Ingrese los entregables, uno por línea")
+entre = act.split("\n")
+entre = list(filter(None, entre))
+if len(entre) > 0:
+  st.write("Entregables:")
+  for i, act in enumerate(entre):
+    st.write(f"{i+1}. {act}")
+##Costo
+st.number_input("Costo de participación: ", min_value=0, format="%i", step= 1)
+
+## Motivo del costo
+with st.expander("Motivo del costo: "):
+  costo_mot= st.text_area("",)
+
+## Nombre del responsable
+with st.expander("Nombre del responsable: "):
+  name_resp= st.text_area("",)
+ 
+## Medio de contacto
+with st.expander("Medio de contacto):
+  num_tel= st.text_area("",placeholder="Ingrese su numero de teléfono")
+  correo= st.text_area("",placeholder="Ingrese su correo electrónico")
+ 
 
