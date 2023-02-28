@@ -1,11 +1,12 @@
 import streamlit as st
 #import plotly.graph_objects as go
 
-incomes= ["Salary", "Blog", "Other Incomes"]
-expenses=["Rent", "Utilities", "Groceries", "Car", "Other Expenses", "Saving"]
-currency="USD"
-page_title = "Incomes and Expense Tracker"
-page_icon=":money_with_wings:"
+
+#incomes= ["Salary", "Blog", "Other Incomes"]
+#expenses=["Rent", "Utilities", "Groceries", "Car", "Other Expenses", "Saving"]
+#currency="USD"
+page_title = "Socios formadores"
+page_icon=":man_office_worker:"
 layout= "centered"
 
 st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
