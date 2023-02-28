@@ -97,15 +97,14 @@ with st.expander("Información del proyecto "):
 ## Costo
 with st.expander("Costo"):
   st.number_input("Costo de participación: ", min_value=0, format="%i", step= 1)
-  st.write("Motivo del costo: ")
-  motivoCost= st.text_area("",placeholder="Ingrese el motivo del costo")
+  motivoCost= st.text_area("Motivo del costo",placeholder="Ingrese el motivo del costo")
 
  
 ## Medio de contacto
 with st.expander("Responsable"):
-  responsable= st.text_input("",placeholder="Ingrese el nombre del responsable")
+  responsable= st.text_input("Nombre",placeholder="Ingrese el nombre del responsable")
   col3, col4 = st.columns([2,2])
   with col3:
-    num_tel= st.text_input("",placeholder="Ingrese su número de teléfono")
+    num_tel= st.text_input("Numero de telefono",placeholder="Ingrese su número de teléfono")
   with col4:
-    correo= st.text_input("",placeholder="Ingrese su correo electrónico")
+    correo= st.text_input("Correo electronico",placeholder="Ingrese su correo electrónico")
