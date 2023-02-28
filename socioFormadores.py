@@ -33,5 +33,6 @@ with st.expander("Requisitos para el alumno: "):
   requirements= st.text_area("")
 ##Carreras
 carreras=("Todas","Arquitecto", "Ingeniero Civil","Licenciado en Urbanismo","Licenciado en economía", "Licenciado en Derecho","Licenciado en Relaciones Internacionales", "Licenciado en Gobierno y transformacion publica", "Licenciado en Arte digital","Licenciado en Comunicación","Licenciado en Diseño","Licenciado en Innovacion Educativa","Licenciado en Letras Hispanicas","Licenciado en periodismo","Licenciado en Tecnologia y produccion musical","Ingeniero Biomedico", "Ingeniero en Electronica", "Ingeniero en innovacion y desarrollo","Ingeniero industrial y de sistemas","Ingeniero Mecanico","Ingniero Mecatronico")
-col1=st.columns(1)
-col1=selectbox("Seleccione las carreras que pueden participar: ",carreras, key="carreas")
+with st.form(entry_form, clear_on_submit=True):
+  col1=st.columns(1)
+  col1=selectbox("Seleccione las carreras que pueden participar: ",carreras, key="carreas")
