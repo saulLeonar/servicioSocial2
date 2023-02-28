@@ -38,10 +38,10 @@ container1 = st.beta_container()
 sym = container1.text_input('for adding')
 container2 = st.beta_container()
 add_button = container2.button('add')
-
-if add_button:
-  wt.extend(sym)
-st.write(wt)
+while:
+  if add_button:
+    wt.extend(sym)
+   st.write(wt)
 
 
 #Fechas
