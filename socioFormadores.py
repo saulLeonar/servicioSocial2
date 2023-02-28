@@ -19,7 +19,7 @@ st.title(page_title+""+page_icon)
 
 hora=[]
 for i in range (0,100):
-  horas.append(i)
+  hora.append(i)
 
 st.header(f"Registro de {currency}")
 
