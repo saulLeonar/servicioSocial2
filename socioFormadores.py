@@ -21,7 +21,7 @@ hora=["0","1","2","3","4","5"]
 
 st.header(f"Registro de {currency}")
 ##Descripccion del proyecto##
-with. st expander("Descipción del proyecto: "):
+with st expander("Descipción del proyecto: "):
   description= st.text_area("", placeholder="Ingresa aqui la descripcion del proyecto...")
  
  ##cupo del grupo
