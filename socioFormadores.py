@@ -104,7 +104,7 @@ if len(entre) > 0:
 ## Costo
 with st.expander("Motivo del costo: "):
   st.number_input("Costo de participación: ", min_value=0, format="%i", step= 1)
-  costo_mot= st.text_area("")
+  motivoCost= st.text_area("",placeholder="Ingrese el motivo del costo")
 
  
 ## Medio de contacto
