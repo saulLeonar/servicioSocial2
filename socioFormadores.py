@@ -37,7 +37,7 @@ carreras=st.multiselect("Seleccione carreras participantes: ", ["Todas","Arquite
 
 ##Requisitos
 st.header('Watchlist')
-
+wt=[]
 container1 = st.beta_container()
 sym = container1.text_input('for adding')
 container2 = st.beta_container()
