@@ -45,6 +45,7 @@ add_button = container2.button('add')
 
 if add_button:
     wt.append(sym)
+st.write(wt)
 
 
 #Fechas
