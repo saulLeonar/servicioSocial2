@@ -32,9 +32,9 @@ carreras=st.multiselect("Seleccione carreras participantes: ", ["Todas","Arquite
 
 ## Requisitos
 x=["Añadir requisitos"]
-requisitos=st.multiselect("Requerimientos: ", x)
 container2 = st.beta_container()
 add_button = container2.button('add')
+requisitos=st.multiselect("Requerimientos: ", x)
 if add_button:
     x.append(requisitos)
 
