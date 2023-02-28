@@ -14,7 +14,7 @@ st.title(page_title+""+page_icon)
 
 st.header(f"Registro de {currency}")
 with st.expander("Nombre del proyecto: "):
-  name= st.text_area("")
+  name= text_input("")
  
 ##Descripción del proyecto##
 with st.expander("Descipción del proyecto: "):
@@ -106,7 +106,7 @@ with st.expander("Costo"):
  
 ## Medio de contacto
 with st.expander("Responsable"):
-  responsable= st.text_area("",placeholder="Ingrese el nombre del responsable")
+  responsable= st.text_input("",placeholder="Ingrese el nombre del responsable")
   col3, col4 = st.columns([2,2])
   with col3:
     num_tel= st.text_input("",placeholder="Ingrese su número de teléfono")
