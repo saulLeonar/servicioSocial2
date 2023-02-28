@@ -34,7 +34,22 @@ st.number_input("Horas a acreditar: ", min_value=50, format="%i", step= 1)
 
 ##Carreras
 carreras=st.multiselect("Seleccione carreras participantes: ", ["Todas","Arquitecto", "Ingeniero Civil","Licenciado en Urbanismo""Licenciado en economía", "Licenciado en Derecho","Licenciado en Relaciones Internacionales", "Licenciado en Gobierno y transformación pública", "Licenciado en Arte digital","Licenciado en Comunicación","Licenciado en Diseño","Licenciado en Innovación Educativa","Licenciado en Letras Hispanicas","Licenciado en periodismo","Licenciado en Tecnología y producción musical","Ingeniero Biomedico", "Ingeniero en Electronica", "Ingeniero en innovacion y desarrollo","Ingeniero industrial y de sistemas","Ingeniero Mecanico","Ingniero Mecatronico"])
- 
+
+##Requisitos
+wt = ['initialised text']
+with watchlist:
+     st.header('Watchlist')
+     #create 2 columns inside watchlist header
+     col1 = st.beta_columns()
+     with col1:
+         container1 = st.beta_container()
+         sym = container1.text_input('for adding')
+         add_button = container2.button('add')
+         if add_button:
+             wt.append(sym)
+ st.write(wt)
+
+
 #Fechas
 today = datetime.date.today()
 tomorrow = today + datetime.timedelta(days=1)
