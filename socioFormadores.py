@@ -78,23 +78,21 @@ with st.expander("Información del proyecto "):
       estado = st.selectbox("Estado", ["", "Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila", "Colima", "Ciudad de México", "Durango", "Estado de México", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas"])
   with col3:
       codigo_postal = st.text_input("Código Postal")
+  act = st.text_area("Ingrese las actividades, una por línea")
+  act = act.split("\n")
+  act = list(filter(None, act))
+  if len(requirements) > 0:
+   st.write("Actividades:")
+   for i, act in enumerate(act):
+    st.write(f"{i+1}. {act}")
 
-  
-   act = st.text_area("Ingrese las actividades, una por línea")
-   act = act.split("\n")
-   act = list(filter(None, act))
-   if len(requirements) > 0:
-     st.write("Actividades:")
-     for i, act in enumerate(act):
-       st.write(f"{i+1}. {act}")
-
-    entre = st.text_area("Ingrese los entregables, uno por línea")
-    entre = entre.split("\n")
-    entre = list(filter(None, entre))
-    if len(entre) > 0:
-      st.write("Entregables:")
-      for i, entre in enumerate(entre):
-        st.write(f"{i+1}. {entre}")
+  entre = st.text_area("Ingrese los entregables, uno por línea")
+  entre = entre.split("\n")
+  entre = list(filter(None, entre))
+  if len(entre) > 0:
+    st.write("Entregables:")
+    for i, entre in enumerate(entre):
+      st.write(f"{i+1}. {entre}")
 
 ## Costo
 with st.expander("Costo"):
