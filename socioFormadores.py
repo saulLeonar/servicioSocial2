@@ -1,3 +1,6 @@
+import calendar
+from datatime import datatime 
+
 import streamlit as st
 #import plotly.graph_objects as go
 
@@ -5,9 +8,18 @@ import streamlit as st
 #incomes= ["Salary", "Blog", "Other Incomes"]
 #expenses=["Rent", "Utilities", "Groceries", "Car", "Other Expenses", "Saving"]
 #currency="USD"
-page_title = "Socios formadores"
+page_title = "Socio formadores"
 page_icon=":office_worker:"
 layout= "centered"
 
 st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
 st.title(page_title+""+page_icon)
+
+years = [datetime.today().year. datatime.todat().year+1]
+months= list(calendar.month_name[1:])
+
+
+#st.header(f"Data Entryin {currency}")
+
+
+
