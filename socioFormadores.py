@@ -1,7 +1,6 @@
 
 import datetime
 import streamlit as st
-from SessionState.py
 #import plotly.graph_objects as go
 
 
@@ -38,7 +37,7 @@ carreras=st.multiselect("Seleccione carreras participantes: ", ["Todas","Arquite
 
 ##Requisitos
 wt = ['initialised text']
-ss = SessionState.get(wt=wt)
+ss = st.session_state(wt=wt)
 
 st.header('Watchlist')
 
