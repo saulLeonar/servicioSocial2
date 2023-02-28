@@ -1,5 +1,5 @@
 import calendar
-from datatime import datatime 
+from datetime import datetime 
 
 import streamlit as st
 #import plotly.graph_objects as go
@@ -15,7 +15,7 @@ layout= "centered"
 st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
 st.title(page_title+""+page_icon)
 
-years = [datetime.today().year. datatime.todat().year+1]
+years = [datetime.today().year, datetime.today().year+1]
 months= list(calendar.month_name[1:])
 
 
