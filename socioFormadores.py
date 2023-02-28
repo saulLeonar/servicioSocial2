@@ -13,7 +13,7 @@ st.title(page_title+""+page_icon)
 
 
 st.header(f"Registro de {currency}")
-name= text_input("Nombre del proyecto")
+name= st.text_input("Nombre del proyecto")
  
 ##Descripción del proyecto##
 with st.expander("Descipción del proyecto: "):
