@@ -107,5 +107,8 @@ with st.expander("Costo"):
 ## Medio de contacto
 with st.expander("Responsable"):
   responsable= st.text_area("",placeholder="Ingrese el nombre del responsable")
-  num_tel= st.text_area("",placeholder="Ingrese su número de teléfono")
-  correo= st.text_area("",placeholder="Ingrese su correo electrónico")
+  col3, col4 = st.columns([2,2])
+  with col3:
+    num_tel= st.text_input("",placeholder="Ingrese su número de teléfono")
+  with col4:
+    correo= st.text_input("",placeholder="Ingrese su correo electrónico")
