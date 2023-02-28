@@ -14,7 +14,7 @@ st.title(page_title+""+page_icon)
 
 st.header(f"Registro de {currency}")
 with st.expander("Nombre del proyecto: "):
-  name= st.text_area("",)
+  name= st.text_area("")
  
 ##Descripción del proyecto##
 with st.expander("Descipción del proyecto: "):
@@ -105,11 +105,11 @@ st.number_input("Costo de participación: ", min_value=0, format="%i", step= 1)
 
 ## Motivo del costo
 with st.expander("Motivo del costo: "):
-  costo_mot= st.text_area("",)
+  costo_mot= st.text_area("")
 
 ## Nombre del responsable
 with st.expander("Nombre del responsable: "):
-  name_resp= st.text_area("",)
+  name_resp= st.text_area("")
  
 ## Medio de contacto
 with st.expander("Medio de contacto"):
