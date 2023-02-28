@@ -79,14 +79,14 @@ with st.expander("Información del proyecto "):
   with col3:
       codigo_postal = st.text_input("Código Postal")
 
-  with st.expander("Actividades y entregables"):
-    act = st.text_area("Ingrese las actividades, una por línea")
-    act = act.split("\n")
-    act = list(filter(None, act))
-    if len(requirements) > 0:
-      st.write("Actividades:")
-      for i, act in enumerate(act):
-        st.write(f"{i+1}. {act}")
+  
+   act = st.text_area("Ingrese las actividades, una por línea")
+   act = act.split("\n")
+   act = list(filter(None, act))
+   if len(requirements) > 0:
+     st.write("Actividades:")
+     for i, act in enumerate(act):
+       st.write(f"{i+1}. {act}")
 
     entre = st.text_area("Ingrese los entregables, uno por línea")
     entre = entre.split("\n")
