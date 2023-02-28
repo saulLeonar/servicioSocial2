@@ -24,7 +24,11 @@ st.header(f"Registro de {currency}")
 with st.expander("Descipción del proyecto: "):
   description= st.text_area("", placeholder="Ingresa aqui la descripcion del proyecto...")
  
- ##cupo del grupo
+##cupo del grupo
+x="numero"
+st.number_input("Numero de alumnos que se necsita: ", min_value=0, format="%i", step= 1, key=x)
+## 
+
 
 ##Horas acreditar##
 with st.form("entry_form", clear_on_submit=True):
