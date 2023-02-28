@@ -46,8 +46,6 @@ add_button = container2.button('add')
 if add_button:
     st.wt.append(sym)
 
-st.write(ss.wt)
-
 
 #Fechas
 today = datetime.date.today()
