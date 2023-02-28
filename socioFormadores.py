@@ -17,16 +17,15 @@ st.title(page_title+""+page_icon)
 
 
 
-hora=[]
-for i in range (0,100):
-  hora.append(i)
+hora=["0","1","2","3"]
 
 st.header(f"Registro de {currency}")
 
 ##Horas acreditar##
 with st.form("entry_form", clear_on_submit=True):
-  col1=st.columns(1)
+  col1,col2=st.columns(2)
   col1.selectbox("Selecciona limite de horas a acreditar:", hora, key="hora")
+  col2.selectbox("Selecciona limite de horas a acreditar:", hora, key="hora")
 
 
 
