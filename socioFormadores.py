@@ -102,8 +102,9 @@ if len(entre) > 0:
     st.write(f"{i+1}. {entre}")
 
 ## Costo
-with st.expander("Motivo del costo: "):
+with st.expander("Costo"):
   st.number_input("Costo de participación: ", min_value=0, format="%i", step= 1)
+  st.write("Motivo del costo: ")
   motivoCost= st.text_area("",placeholder="Ingrese el motivo del costo")
 
  
