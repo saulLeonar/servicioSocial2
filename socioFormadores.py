@@ -80,26 +80,22 @@ with col2:
 with col3:
     codigo_postal = st.text_input("Código Postal")
 
+with st.expander("Actividades y entregables"):
+  act = st.text_area("Ingrese las actividades, una por línea")
+  act = act.split("\n")
+  act = list(filter(None, act))
+  if len(requirements) > 0:
+    st.write("Actividades:")
+    for i, act in enumerate(act):
+      st.write(f"{i+1}. {act}")
 
-##Actividades
-st.title("Actividades")
-act = st.text_area("Ingrese las actividades, una por línea")
-act = act.split("\n")
-act = list(filter(None, act))
-if len(requirements) > 0:
-  st.write("Actividades:")
-  for i, act in enumerate(act):
-    st.write(f"{i+1}. {act}")
-
-##Entregables
-st.title("Entregables")
-entre = st.text_area("Ingrese los entregables, uno por línea")
-entre = entre.split("\n")
-entre = list(filter(None, entre))
-if len(entre) > 0:
-  st.write("Entregables:")
-  for i, entre in enumerate(entre):
-    st.write(f"{i+1}. {entre}")
+  entre = st.text_area("Ingrese los entregables, uno por línea")
+  entre = entre.split("\n")
+  entre = list(filter(None, entre))
+  if len(entre) > 0:
+    st.write("Entregables:")
+    for i, entre in enumerate(entre):
+      st.write(f"{i+1}. {entre}")
 
 ## Costo
 with st.expander("Costo"):
