@@ -25,15 +25,11 @@ with st.expander("Descipción del proyecto: "):
   description= st.text_area("", placeholder="Ingresa aqui la descripcion del proyecto...")
  
 ##cupo del grupo
-x="numero"
 st.number_input("Numero de alumnos que se necsita: ", min_value=0, format="%i", step= 1)
-## 
-
 
 ##Horas acreditar##
-with st.form("entry_form", clear_on_submit=True):
-  col1,col2=st.columns(2)
-  col1.selectbox("Selecciona limite de horas a acreditar:", hora, key="hora")
+st.number_input("Horas acreditar: ", min_value=50, format="%i", step= 1)
+
   
 
 
