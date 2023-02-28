@@ -1,6 +1,5 @@
-#import calendar
-#from datetime import datetime 
 
+import datetime
 import streamlit as st
 #import plotly.graph_objects as go
 
@@ -31,6 +30,17 @@ st.number_input("Horas a acreditar: ", min_value=50, format="%i", step= 1)
 ##FRequisitos
 #with st.expander("Requisitos para el alumno: "):
 #  requirements= st.text_area("")
+
+
 ##Carreras
 carreras=st.multiselect("Seleccione carreras participantes: ", ["Todas","Arquitecto", "Ingeniero Civil","Licenciado en Urbanismo""Licenciado en economía", "Licenciado en Derecho","Licenciado en Relaciones Internacionales", "Licenciado en Gobierno y transformación pública", "Licenciado en Arte digital","Licenciado en Comunicación","Licenciado en Diseño","Licenciado en Innovación Educativa","Licenciado en Letras Hispanicas","Licenciado en periodismo","Licenciado en Tecnología y producción musical","Ingeniero Biomedico", "Ingeniero en Electronica", "Ingeniero en innovacion y desarrollo","Ingeniero industrial y de sistemas","Ingeniero Mecanico","Ingniero Mecatronico"])
  
+#Fecha de inicio
+today = datetime.date.today()
+tomorrow = today + datetime.timedelta(days=1)
+start_date = st.date_input('Start date', today)
+end_date = st.date_input('End date', tomorrow)
+if start_date < end_date:
+    st.success('Start date: `%s`\n\nEnd date:`%s`' % (start_date, end_date))
+else:
+    st.error('Error: End date must fall after start date.')
