@@ -41,7 +41,6 @@ add_button = container2.button('add')
 while True:
   if add_button:
     wt.extend(sym)
-   st.write(wt)
 
 
 #Fechas
