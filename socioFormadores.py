@@ -20,10 +20,10 @@ with st.expander("Información del proyecto "):
   description= st.text_area("Objetivos:", placeholder="Ingrese aquí los objetivos o la descripción del proyecto...")
  
   ##Cupo del grupo
-  st.number_input("Número de alumnos requeridos: ", min_value=0, format="%i", step= 1)
+  st.number_input("Número de alumnos requeridos: ", min_value=1, format="%i", step= 1)
 
   ##Horas a acreditar##
-  st.number_input("Cantidad máxima de horas a acreditar: ", min_value=50, format="%i", step= 1)
+  st.number_input("Cantidad máxima de horas a acreditar: ", min_value=40, format="%i", step= 1)
   
   ##Requisitos
   st.header("Requisitos")
