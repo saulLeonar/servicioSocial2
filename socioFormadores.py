@@ -15,8 +15,8 @@ st.header(f"Registro de {currency}")
 name= st.text_input("Nombre del proyecto: ")
  
 ##Descripción del proyecto##
-st.header("Descripción")
 with st.expander("Información del proyecto "):
+  st.header("Descripción")
   description= st.text_area("Objetivos:", placeholder="Ingrese aquí los objetivos o la descripción del proyecto...")
  
   ##Cupo del grupo
