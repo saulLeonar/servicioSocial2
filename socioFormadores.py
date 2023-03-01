@@ -11,58 +11,60 @@ layout= "centered"
 st.set_page_config(page_title=page_title, page_icon=page_icon, layout=layout)
 st.title(page_title+""+page_icon)
 
-
 st.header(f"Registro de {currency}")
 name= st.text_input("Nombre del proyecto: ")
  
 ##Descripción del proyecto##
+st.header("Descripción")
 with st.expander("Información del proyecto "):
-  description= st.text_area("Descripción:", placeholder="Ingresa aquí la descripción del proyecto...")
+  description= st.text_area("Objetivos:", placeholder="Ingrese aquí los objetivos o la descripción del proyecto...")
  
   ##Cupo del grupo
-  st.number_input("Número de alumnos que se necesitan: ", min_value=0, format="%i", step= 1)
+  st.number_input("Número de alumnos requeridos: ", min_value=0, format="%i", step= 1)
 
   ##Horas a acreditar##
-  st.number_input("Horas a acreditar: ", min_value=50, format="%i", step= 1)
-
-
+  st.number_input("Cantidad máxima de horas a acreditar: ", min_value=50, format="%i", step= 1)
+  
+  ##Requisitos
+  st.header("Requisitos")
+  
   ##Carreras
   carreras=st.multiselect("Seleccione carreras participantes: ", ["Todas","Arquitecto", "Ingeniero Civil","Licenciado en Urbanismo""Licenciado en economía", "Licenciado en Derecho","Licenciado en Relaciones Internacionales", "Licenciado en Gobierno y transformación pública", "Licenciado en Arte digital","Licenciado en Comunicación","Licenciado en Diseño","Licenciado en Innovación Educativa","Licenciado en Letras Hispanicas","Licenciado en periodismo","Licenciado en Tecnología y producción musical","Ingeniero Biomedico", "Ingeniero en Electronica", "Ingeniero en innovacion y desarrollo","Ingeniero industrial y de sistemas","Ingeniero Mecanico","Ingniero Mecatronico"])
 
-  ## Requisitos
-  st.title("Requisitos")
-  requirements = st.text_area("Ingrese los requisitos, uno por línea")
+  ##Habilidades
+  requirements = st.text_area("Ingrese las habilidades del alumno o los requisitos necesarios, uno por línea")
   requirements = requirements.split("\n")
   requirements = list(filter(None, requirements))
   if len(requirements) > 0:
     st.write("Requisitos:")
     for i, requirement in enumerate(requirements):
       st.write(f"{i+1}. {requirement}")
-
-  #Fechas
+  
+  ##Fechas y horario
+  st.header("Fechas y horario de servicio")
+  
+  ##Fechas
   today = datetime.date.today()
   tomorrow = today + datetime.timedelta(days=1)
   start_date = st.date_input('Fecha de inicio', today)
   end_date = st.date_input('Fecha de término', tomorrow)
 
-  # Horario
-  st.header("Horario de servicio")
-
-  # Default start and end time
+  ##Horario
+  #Tiempo de inicio y término por defecto
   start_time = time(8, 0)
   end_time = time(18, 0)
 
-  # User-selectable time range
-  selected_time_range = st.slider("Select Time Range", value=(start_time, end_time), format="HH:mm")
+  #Rango de tiempo seleccionable por el usuario
+  selected_time_range = st.slider("Seleccione el rango de tiempo", value=(start_time, end_time), format="HH:mm")
 
-  # Display selected time range
-  st.write("Selected Time Range: {} - {}".format(selected_time_range[0].strftime("%H:%M"), selected_time_range[1].strftime("%H:%M")))
+  #Mostrar el rango de tiempo seleccionado
+  st.write("Rango de tiempo seleccionado: {} - {}".format(selected_time_range[0].strftime("%H:%M"), selected_time_range[1].strftime("%H:%M")))
 
   ##Modalidad
   modalidad= ["Presencial", "Remoto", "Hibrido"]
   st.selectbox("Seleccione la modalidad",modalidad,key="Modalidad")
 
-  ##Ubicación
+  ##Dirección
   st.header("Dirección")
   # Calle y Número
   calle_numero = st.text_input("Calle y Número")
@@ -105,6 +107,6 @@ with st.expander("Responsable"):
   responsable= st.text_input("Nombre",placeholder="Ingrese el nombre del responsable")
   col3, col4 = st.columns([2,2])
   with col3:
-    num_tel= st.text_input("Numero de telefono",placeholder="Ingrese su número de teléfono")
+    num_tel= st.text_input("Número de teléfono",placeholder="Ingrese su número de teléfono")
   with col4:
-    correo= st.text_input("Correo electronico",placeholder="Ingrese su correo electrónico")
+    correo= st.text_input("Correo electrónico",placeholder="Ingrese su correo electrónico")
