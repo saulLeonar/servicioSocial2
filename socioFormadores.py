@@ -99,7 +99,7 @@ with st.expander("Información del proyecto "):
 ## Costo
 with st.expander("Costo"):
   st.number_input("Costo de participación: ", min_value=0, format="%i", step= 1)
-  motivoCost= st.text_area("Motivo del costo:",placeholder="Ingrese el motivo del costo")
+  motivoCost= st.text_area("Motivo del costo:",placeholder="Ingrese el motivo del costo...")
 
  
 ## Medio de contacto
