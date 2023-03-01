@@ -61,7 +61,7 @@ with st.expander("Información del proyecto "):
   st.write("Rango de tiempo seleccionado: {} - {}".format(selected_time_range[0].strftime("%H:%M"), selected_time_range[1].strftime("%H:%M")))
 
   ##Modalidad
-  modalidad= ["Presencial", "Remoto", "Hibrido"]
+  modalidad= ["Presencial", "Remoto", "Híbrido"]
   st.selectbox("Seleccione la modalidad",modalidad,key="Modalidad")
 
   ##Dirección
