@@ -110,4 +110,4 @@ with st.expander("Contacto de la organización"):
     num_tel= st.text_input("Número de teléfono",placeholder="Ingrese su número de teléfono")
   with col4:
     correo= st.text_input("Correo electrónico",placeholder="Ingrese su correo electrónico")
-  sitio_web= st.text_input("Sitio web",placeholder="Ingrese la URL del sitio web o de la página de red social")
+  sitio_web= st.text_input("Sitio web",placeholder="Ingrese la URL del sitio web o de la página de red social") 
